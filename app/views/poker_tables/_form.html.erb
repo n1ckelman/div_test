@@ -1,0 +1,6 @@
+<%= simple_form_for @poker_table do |f| %>
+  <%= f.input :name, label: "Name of table" %>
+  <%= f.input :actual_time, :as => :datetime_picker %>
+  <%= f.button :submit %>
+
+<% end %>

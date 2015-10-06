@@ -1,0 +1,27 @@
+<h1>Listing poker_tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actual time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poker_tables.each do |poker_table| %>
+      <tr>
+        <td><%= poker_table.name %></td>
+        <td><%= poker_table.actual_time %></td>
+        <td><%= link_to 'Show', poker_table %></td>
+        <td><%= link_to 'Edit', edit_poker_table_path(poker_table) %></td>
+        <td><%= link_to 'Destroy', poker_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poker table', new_poker_table_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @poker_table.name %>
+</p>
+
+<p>
+  <strong>Actual time:</strong>
+  <%= @poker_table.actual_time %>
+</p>
+
+<%= link_to 'Edit', edit_poker_table_path(@poker_table) %> |
+<%= link_to 'Back', poker_tables_path %>

@@ -1,0 +1,29 @@
+<div class="row">
+<div class="col-md-4">
+<%= simple_form_for(@player) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email %>
+  </div>
+
+
+</div>
+
+<div class="col-md-8">
+	<p>
+		<h3> Avalaible poker tables </h3>
+		<% @poker_tables.each do |poker_table| %>
+		<div>
+			<%= check_box_tag "player[poker_table_ids][]", poker_table.id  %>
+			<%= poker_table.name %>
+			<%= poker_table.actual_time %>
+		</div>
+		<% end %>	
+	</p>
+</div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>
